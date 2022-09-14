@@ -6,8 +6,8 @@ plugins {
     id("net.mamoe.mirai-console") version "2.11.1"
 }
 
-group = "org.example"
-version = "0.1.0"
+group = "org.jxmm"
+version = "0.0.2"
 
 repositories {
     maven("https://maven.aliyun.com/repository/public") // 阿里云国内代理仓库
