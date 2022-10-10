@@ -2,7 +2,7 @@
 
 ## 一.介绍
 
-### 1.此项目为[靖暄](http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes)个人制作用于班群课表的 [Mirai Console](https://github.com/mamoe/mirai-console) 插件
+### 1.此项目为[靖暄](http://wpa.qq.com/msgrd?v=3&uin=&site=qq&menu=yes)个人制作用于班群课表的 [Mirai Console](https://github.com/mamoe/mirai-console) 插件，同样兼容[Mirai core](https://github.com/sonder-joker/mirai-compose)
 
 纯萌新制作，本人无任何java  kotlin基础，仅编写过  
 html  
