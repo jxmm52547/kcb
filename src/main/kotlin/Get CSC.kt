@@ -7,7 +7,6 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.util.*
-import kotlin.collections.HashMap
 
 val map = HashMap<String, String>().also {
     it["MONDAY"] = "周一"
@@ -46,8 +45,20 @@ fun getCSC(){
             }
         }
 
+        else if(msg.matches("""周[一二三四五]课表""".toRegex())) {
+            val week = map[msg.substring(0,2)]
+            if (json.has(week)){
+                val today = json[week].asJsonObject
+                if (today["Enable"].asBoolean) {
+                    group.sendMessage("${map[week]}课表为: ${today["value"].asString}")
+                } else {
+                    group.sendMessage("${map[week]}课表关闭")
+                }
+            }
+        }
+
         //第一种方式修改课表  (指定修改周几课表)
-        else if(msg.matches("""^修改周[一二三四五]课表为：.*""".toRegex())) {
+        else if(msg.matches("""^修改周[一二三四五]课表为：[\s\S]+""".toRegex())) {
             val todayValue = msg.substring(8, msg.length)
             json[map[msg.substring(2, 4)]].asJsonObject.addProperty("value", todayValue)
             configFile.writeText(gson.toJson(json))
