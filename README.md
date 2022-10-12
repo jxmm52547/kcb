@@ -24,7 +24,7 @@ json
 
 ### 3.代码参考于
 [kono-dada/doudizhu](https://github.com/kono-dada/doudizhu)  
-这个插件的开源代码让我写出了此插件
+通过这个插件的开源代码学习mirai机器人语法
 
 ## 二.使用方法
 
