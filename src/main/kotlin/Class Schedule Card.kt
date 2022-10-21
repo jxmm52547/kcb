@@ -18,6 +18,8 @@ fun main() {
         this.add("WEDNESDAY", createDay("周三"))
         this.add("THURSDAY", createDay("周四"))
         this.add("FRIDAY", createDay("周五"))
+        this.add("SATURDAY", createDay("周六"))
+        this.add("SUNDAY", createDay("周日"))
     }
 
     if (configFile.exists()){
@@ -25,7 +27,7 @@ fun main() {
         logger.info { "课表加载完毕" }
     } else{
         logger.info { "未检测到课程表,正在为您创建,请等待" }
-        Thread.sleep(5_000)
+        Thread.sleep(2_000)
         File("./kcb_data/").mkdirs()
         configFile.writeText(gson.toJson(jsonGen))
         logger.info{"课表创建完毕"}

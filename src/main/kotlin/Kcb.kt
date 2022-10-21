@@ -8,7 +8,7 @@ object Kcb : KotlinPlugin(
     JvmPluginDescription(
         id = "xyz.jxmm.kcb",
         name = "课程表",
-        version = "0.1.1",
+        version = "0.1.2",
     ) {
         author("靖暄")
     }
@@ -16,8 +16,7 @@ object Kcb : KotlinPlugin(
     override fun onEnable() {
         logger.info { "课程表插件加载成功" }
         main()
-        kotlin.run { xyz.jxmm.getCSC() }
+        kotlin.run { getCSC() }
         time()
     }
 }
-
