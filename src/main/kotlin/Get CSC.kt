@@ -190,7 +190,7 @@ fun time(){
         when (message.contentToString()) {
             "now" -> {
                 val time = LocalDateTime.now()
-                group.sendMessage("现在时间: $time  ${time.dayOfWeek}")
+                group.sendMessage("现在时间: $time  ${todayMap[time.dayOfWeek.toString()]}")
                 return@subscribeAlways
             }
             "开机时间" -> {
